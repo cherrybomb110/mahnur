@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class lizzie : MonoBehaviour
+{
+    float moveY;
+    string I;
+    string want;
+    string number;
+    string pancakes;
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log(I + want + number + pancakes);
+        I = "I";
+        want = "want";
+        number = "100";
+        pancakes = "pancakes";
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
+        if (Input.GetKeyDown(KeyCode.E)) { 
+               transform.Translate(0, 3, 0);
+        }
+    }
+}
