@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class wanda : MonoBehaviour
+{
+    float moveX;
+    float moveZ;
+    float movementSpeed;
+   
+    // Start is called before the first frame update
+    void Start()
+    {
+        movementSpeed = 5;
+        
+       
+    }   
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+        moveX = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
+        moveZ = Input.GetAxis("Vertical");
+        transform.Translate(moveX, 0, 0 );
+    }
+}
